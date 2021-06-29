@@ -4,6 +4,10 @@
 // output: ['is', 'a', 'split', 'sentence.', 'This']
 
 function rearranger(arr) {
+    let x = arr[0];
+    arr.splice(x);
+    arr.push(x);
+    return arr
 }
 
 
