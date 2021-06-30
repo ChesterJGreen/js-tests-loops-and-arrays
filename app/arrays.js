@@ -2,13 +2,13 @@
 // Example:
 // input: ['This', 'is', 'a', 'split', 'sentence.']
 // output: ['is', 'a', 'split', 'sentence.', 'This']
-
 function rearranger(arr) {
     let x = arr[0];
-    arr.splice(x);
     arr.push(x);
+    arr.splice(0, 1);
     return arr
 }
+// arr.push(arr.shift())
 
 
 // ------------------------------------------
@@ -20,6 +20,12 @@ function rearranger(arr) {
 // output: 42
 
 function largestNum(arr) {
+    let x = 0;
+    for (i = 0; i <= arr.length; i++) {
+        if (arr[i] > x) { x = arr[i] }
+    }
+    return x
+
 }
 
 
@@ -32,8 +38,13 @@ function largestNum(arr) {
 // output: [16, 8, 4, 28]
 
 function elemsTimesLength(arr) {
-}
+    let newArr = 0
+    for (x = 0; x <= arr.length; x++) {
+        newArr.push(arr[x] * arr.length)
 
+    }
+    return newArr
+}
 
 // ------------------------------------------
 
@@ -67,7 +78,13 @@ let flights = [{
 
 function flightCost(destination, firstClass) {
     //***hint: use the find method***
-
+    for (let x = 0; x < destination.length; x++)
+        let cost = destination.prices[x] {
+            if (firstClass = true) {
+                finalCost = destination.prices.find(firstClass => firstClass)
+            }
+    return finalCost
+}
 }
 
 
@@ -88,8 +105,19 @@ let staff = [{ id: 1, name: 'Jon' }, { id: 2, name: 'Yuli' }, { id: 21, name: 'P
 { id: 881, name: 'Paul' }, { id: 0, name: 'Jon' }, { id: 999, name: 'Timma' }]
 
 function findById(id) {
-
+    let person = ''
+    for (let x = 0; x <= staff.length; x++)
+        person = id.id[x];
+    if (staff.id[x] = true) { return staff[x] }
+    else (id != ) { return 'No user with that id.' }
 }
+
+// let staffObj = staff.find(staff => staff.id == id)
+// if (!staffObj){
+//     return { error: 'No user with that id'}
+// }
+// return staffObj
+// 
 
 
 // ------------------------------------------
